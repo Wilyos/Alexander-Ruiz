@@ -1,28 +1,26 @@
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 let contacto = document.querySelector('#btn-contacto');
-let sobreMi = document.querySelector('#btn-sobreMi')
+let sobreMi = document.querySelector('#btn-sobreMi');
 
 menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
-}
-
+};
 
 contacto.onclick = (e) => {
     e.preventDefault();
-     const downloadLink = document.getElementById('btn-contacto');
+    const downloadLink = document.querySelector('#downloadContact');
     if (downloadLink) {
         downloadLink.click();
     }
-}
-
+};
 
 sobreMi.onclick = () => {
     document.getElementById("sobreMi").scrollIntoView({
-        behavior:"smooth"
+        behavior: "smooth"
     });
-}
+};
 
 const vcardData = `
 BEGIN:VCARD
@@ -35,14 +33,12 @@ URL:https://luma.com.co
 X-SOCIALPROFILE;type=Facebook:https://www.facebook.com/almaceneslumaoficial/
 X-SOCIALPROFILE;type=Instagram:https://www.instagram.com/almaceneslumaoficial
 END:VCARD
-  `.trim();
+`.trim();
 
+const blob = new Blob([vcardData], { type: 'text/vcard' });
+const url = URL.createObjectURL(blob);
 
-
-  const blob = new Blob([vcardData], { type: 'text/vcard' });
-  const url = URL.createObjectURL(blob);
-
- const downloadLink2 = document.querySelector('#downloadContact');
-if (downloadLink2) {
-    downloadLink2.href = url; 
+const downloadLink = document.querySelector('#downloadContact');
+if (downloadLink) {
+    downloadLink.href = url;
 }

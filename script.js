@@ -11,9 +11,10 @@ menuIcon.onclick = () => {
 
 contacto.onclick = (e) => {
     e.preventDefault();
-     const downloadLink = document.getElementById('downloadContact');
+     const downloadLink = document.getElementById('btn-contacto');
     if (downloadLink) {
         downloadLink.click();
+    }
 }
 
 
@@ -43,5 +44,5 @@ END:VCARD
 
  const downloadLink2 = document.querySelector('#downloadContact');
 if (downloadLink2) {
-    downloadLink2.href = url;
+    downloadLink2.href = url; 
 }

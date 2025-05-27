@@ -30,8 +30,8 @@ N:Ruiz;Alexander;;;
 TEL;TYPE=work:+573116300576
 EMAIL:directorcomercial@luma.com.co
 URL:https://luma.com.co
-X-SOCIALPROFILE;type=Facebook:https://www.facebook.com/almaceneslumaoficial/
-X-SOCIALPROFILE;type=Instagram:https://www.instagram.com/almaceneslumaoficial
+URL:https://www.facebook.com/almaceneslumaoficial/
+URL:https://www.instagram.com/almaceneslumaoficial
 END:VCARD
 `.trim();
 

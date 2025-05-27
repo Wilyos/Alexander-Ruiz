@@ -9,10 +9,11 @@ menuIcon.onclick = () => {
 }
 
 
-contacto.onclick = () => {
-    document.getElementById("contacto").scrollIntoView({
-        behavior:"smooth"
-    });
+contacto.onclick = (e) => {
+    e.preventDefault();
+     const downloadLink = document.getElementById('downloadContact');
+    if (downloadLink) {
+        downloadLink.click();
 }
 
 
@@ -25,14 +26,13 @@ sobreMi.onclick = () => {
 const vcardData = `
 BEGIN:VCARD
 VERSION:3.0
-FN:Juan Pérez
-N:Pérez;Juan;;;
-TEL;TYPE=work:+521234567890
-EMAIL:juan.perez@empresa.com
-URL:https://www.empresa.com
-URL:https://www.portafolio.com
-X-SOCIALPROFILE;type=LinkedIn:https://linkedin.com/in/juanperez
-X-SOCIALPROFILE;type=Instagram:https://instagram.com/juanux
+FN:Alexander Ruiz
+N:Ruiz;Alexander;;;
+TEL;TYPE=work:+573116300576
+EMAIL:directorcomercial@luma.com.co
+URL:https://luma.com.co
+X-SOCIALPROFILE;type=Facebook:https://www.facebook.com/almaceneslumaoficial/
+X-SOCIALPROFILE;type=Instagram:https://www.instagram.com/almaceneslumaoficial
 END:VCARD
   `.trim();
 
@@ -41,5 +41,7 @@ END:VCARD
   const blob = new Blob([vcardData], { type: 'text/vcard' });
   const url = URL.createObjectURL(blob);
 
-  const downloadLink = document.getElementById('downloadContact');
-  downloadLink.href = url;
+ const downloadLink2 = document.querySelector('#downloadContact');
+if (downloadLink2) {
+    downloadLink2.href = url;
+}

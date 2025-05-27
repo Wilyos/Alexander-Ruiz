@@ -15,8 +15,8 @@ h1,h2,h3,h4, span{
   --bg-color: #FFFFFF;
   --second-bg-color: #FFFFFF;
   --text-color: #222222;
-  --main-color: #CE0E2D;
-  --main-color-two: #002554;
+  --main-color: #196A73;
+  --main-color-two: #037F8C;
 }
 html {
   font-size: 60%;
@@ -61,8 +61,8 @@ body{
 span{
   background: linear-gradient(
     270deg,
-     #222222 10%,
-     #002554 100%
+     #124040 10%,
+     #037F8C 100%
   );
   background-clip: text;
   color: transparent;
@@ -86,8 +86,8 @@ span{
   border-radius: 3rem;
   background: linear-gradient(
     270deg,
-    #002554 10%,
-    #222222 100%
+     #124040 10%,
+     #037F8C 100%
   );
   letter-spacing: 1px;
   cursor: pointer;
@@ -700,7 +700,4 @@ transform: scale(1.03);
     font-size: 2rem;
   }
 
-  .copyright{
-    
-  }
 }
